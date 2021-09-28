@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import Nav from "../Nav";
 import NavButton from "../NavButton";
 
-export const HomeNavRoute = ({ exact, path, component: Component }) => (
+export const MyStoryNavRoute = ({ exact, path, component: Component }) => (
   <Route
     exact={exact}
     path={path}
@@ -17,7 +17,21 @@ export const HomeNavRoute = ({ exact, path, component: Component }) => (
   />
 );
 
-export const MyStoryNavRoute = ({ exact, path, component: Component }) => (
+export const ProjectsNavRoute = ({ exact, path, component: Component }) => (
+  <Route
+    exact={exact}
+    path={path}
+    render={(props) => (
+      <div className="relative min-h-screen flex">
+        <Nav {...props} />
+        <Component {...props} />
+        <NavButton />
+      </div>
+    )}
+  />
+);
+
+export const ResumeNavRoute = ({ exact, path, component: Component }) => (
   <Route
     exact={exact}
     path={path}

@@ -4,20 +4,24 @@ import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Landing from "./components/Landing";
-import Home from "./components/Home";
+
 import MyStory from "./components/MyStory";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
 
 import {
-  HomeNavRoute,
   MyStoryNavRoute,
+  ProjectsNavRoute,
+  ResumeNavRoute,
 } from "./components/NavRoutes/NavRoutes";
 
 function App() {
   return (
     <Router>
       <Route exact path="/" render={(props) => <Landing {...props} />} />
-      <HomeNavRoute exact path="/home" component={Home} />
       <MyStoryNavRoute exact path="/mystory" component={MyStory} />
+      <ProjectsNavRoute exact path="/projects" component={Projects} />
+      <ResumeNavRoute exact path="/resume" component={Resume} />
     </Router>
   );
 }

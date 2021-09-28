@@ -5,10 +5,17 @@ import { connect } from "react-redux";
 const NavButton = (props) => {
   return (
     <div className="">
-      <button
-        onClick={() => props.toggleNav()}
-        className="md:hidden fixed fas fa-bars bg-black w-16 h-16 rounded-full text-white right-4 bottom-4"
-      ></button>
+      {props.navIsOpen ? (
+        <button
+          onClick={() => props.toggleNav()}
+          className="md:hidden fixed fas fa-times bg-black w-16 h-16 rounded-full text-white right-4 bottom-4"
+        ></button>
+      ) : (
+        <button
+          onClick={() => props.toggleNav()}
+          className="md:hidden fixed fas fa-bars bg-black w-16 h-16 rounded-full text-white right-4 bottom-4"
+        ></button>
+      )}
     </div>
   );
 };
