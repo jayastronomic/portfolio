@@ -1,14 +1,9 @@
 .landing-container {
-  background-image: url("./styles/assets/landingbg.gif");
+  background-image: url("./styles/assets/portfoliobackground3.png");
+  background-color: black;
   min-height: 100%;
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-@font-face {
-  font-family: "Munro";
-  src: local("Munro"), url("./styles/fonts/munro.ttf") format("truetype");
 }
 
 .landing-enter-button {
@@ -17,8 +12,45 @@
 
 .home-container {
   /* background-color: #142230; */
+  background-image: url("./styles/assets/homebackground.jpg");
+  min-height: 100;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .sarabun {
   font-family: "Sarabun", sans-serif;
+}
+
+.my-story-container {
+  background-image: url("./styles/assets/homebackground.jpg");
+  min-height: 100;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.magz {
+  font-family: "Magz", serif;
+}
+
+@font-face {
+  font-family: "Munro";
+  src: local("Munro"), url("./styles/fonts/munro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Magz";
+  src: local("Magz"), url("./styles/fonts/Magz.otf") format("opentype");
+}
+
+@media (min-width: 768px) {
+  .landing-container {
+    background-image: url("./styles/assets/portfoliobackground.png");
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }

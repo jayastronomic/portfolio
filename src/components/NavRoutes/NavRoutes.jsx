@@ -16,3 +16,17 @@ export const HomeNavRoute = ({ exact, path, component: Component }) => (
     )}
   />
 );
+
+export const MyStoryNavRoute = ({ exact, path, component: Component }) => (
+  <Route
+    exact={exact}
+    path={path}
+    render={(props) => (
+      <div className="relative min-h-screen flex">
+        <Nav {...props} />
+        <Component {...props} />
+        <NavButton />
+      </div>
+    )}
+  />
+);
